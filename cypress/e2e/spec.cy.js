@@ -5,7 +5,7 @@ describe('API - Error scenarios', () => {
       url: 'https://api.typeform.com/me',
       failOnStatusCode: false,
     }).should(({ status, body }) => {
-      expect(status).to.equal(401)
+      expect(status).to.equal(200)
       expect(body).includes('AUTHENTICATION_FAILED')
       expect(body)
         .includes('Authentication credentials not found on the Request Headers')
