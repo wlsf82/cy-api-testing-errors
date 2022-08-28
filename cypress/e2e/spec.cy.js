@@ -43,7 +43,7 @@ describe('API - Error scenarios', () => {
       failOnStatusCode: false,
     }).should(({ status, statusText }) => {
       expect(status).to.equal(404)
-      expect(statusText).includes('Not Found')
+      expect(statusText).to.equal('Not Found')
     })
   })
 })
