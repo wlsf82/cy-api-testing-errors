@@ -35,4 +35,15 @@ describe('Typeform public API', () => {
       expect(description).to.equal('Authentication failed')
     })
   })
+
+  it('fails with 404 (Not Found) status code when url does not exist', () => {
+    cy.request({
+      method: 'GET',
+      url: 'https://walmyr.dev/invalid-123',
+      failOnStatusCode: false,
+    }).should(({ status, statusText }) => {
+      expect(status).to.equal(404)
+      expect(statusText).includes('Not Found')
+    })
+  })
 })
