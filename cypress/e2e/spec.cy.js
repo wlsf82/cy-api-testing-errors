@@ -1,4 +1,4 @@
-describe('Typeform public API', () => {
+describe('API - Error scenarios', () => {
   it('fails with 401 (Unauthorized) status code when access token is missing', () => {
     cy.request({
       method: 'GET',
