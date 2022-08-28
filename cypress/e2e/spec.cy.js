@@ -9,6 +9,12 @@ describe('Typeform public API', () => {
       expect(body).includes('AUTHENTICATION_FAILED')
       expect(body)
         .includes('Authentication credentials not found on the Request Headers')
+      // Or
+      const bodyObj = JSON.parse(body)
+      const { code, description } = bodyObj
+      expect(code).to.equal('AUTHENTICATION_FAILED')
+      expect(description)
+        .to.equal('Authentication credentials not found on the Request Headers')
     })
   })
 })
