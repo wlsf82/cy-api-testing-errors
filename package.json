@@ -1,0 +1,20 @@
+{
+  "name": "cy-api-testing-errors",
+  "version": "1.0.0",
+  "description": "Sample project to demonstrate how to test API error scenarios using Cypress.io.",
+  "main": "cypress.config.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run"
+  },
+  "keywords": [
+    "Cypress.io",
+    "API Testing",
+    "Talking About Testing"
+  ],
+  "author": "Walmyr Filho <wlsf82@gmail.com> (https://walmyr.dev/)",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^10.6.0"
+  }
+}
