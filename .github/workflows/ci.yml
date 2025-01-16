@@ -14,3 +14,4 @@ jobs:
         with:
           name: cypress-video
           path: cypress/videos
+          if-no-files-found: ignore
